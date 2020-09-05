@@ -10,8 +10,8 @@
 	<link rel="icon" href="src/wlogobg.png">
 </head>
 <body style="font-family: 'IBM Plex Sans', sans-serif;">
-	<div class="container-fluid">
-		<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+	<header>
+		<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light shadow-sm rounded">
 			<a class="navbar-brand" href="https://wastadt.com/">
 				<img src="src/wlogo.png" width="50" height="50" alt="William Arie Stadtlander">
 				William Arie Stadtlander
@@ -21,11 +21,11 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarData">
 				<ul class="navbar-nav mr-auto">
-					<li class="nav-item">
-						<a class="nav-link" href="https://wastadt.com/">Home</a>
-					</li>
 					<li class="nav-item active">
-						<a class="nav-link" href="https://wastadt.com/projects">Projects <span class="sr-only">(current)</span></a>
+						<a class="nav-link" href="https://wastadt.com/">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://wastadt.com/projects">Projects</a>
 					</li>
 				</ul>
 				<span class="navbar-text">
@@ -44,7 +44,14 @@
 				</span>
 			</div>
 		</nav>
-	</div>
+	</header>
+	<main class="pt-1">
+	</main>
+	<footer>
+		<nav class="navbar fixed-bottom navbar-light bg-light shadow-sm rounded">
+			<p>© 2020 William Arie Stadtlander</p>
+		</nav>
+	</footer>
 
 
 	<!-- JS For Bootstrap v4.5.2, Popper.js, and jQuery -->
