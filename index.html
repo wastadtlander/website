@@ -27,11 +27,14 @@
 						<a class="nav-link" href="https://wastadt.com/">Home <span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
+						<a class="nav-link" href="src/Resume V5.3.pdf">Resume</a>
+					</li>
+					<!-- <li class="nav-item">
 						<a class="nav-link" href="https://wastadt.com/projects">Projects</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="https://wastadt.com/about">About Me</a>
-					</li>
+					</li> -->
 				</ul>
 				<span class="navbar-text">
 					<a href="https://www.linkedin.com/in/william-stadtlander-01a609192/" target="_blank">
@@ -46,9 +49,6 @@
 					<a href="mailto:wastadtlander@vt.edu">
 						<img class="socialhover" src="src/mail.png" width="30" height="30" alt="Mail">
 					</a>
-					<a href="#" data-toggle="modal" data-target="#gameModal">
-						<img onclick="main()" class="socialhover" src="src/emark.png" width="30" height="30" alt="Game">
-					</a>
 				</span>
 			</div>
 		</nav>
@@ -56,60 +56,29 @@
 	<main class="pt-1">
 		<div class="jumbotron shadow">
 			<h2>Objective</h2>
-			<p style="font-size: 20px"> Currently enrolled in an undergraduate degree program with a major of Computer Engineering and an intended focus on Machine Learning. Pursuing involvement in research and study abroad opportunities, as well as Engineering student government and design teams. Ultimately, would like to pursue advanced degrees and a career including Machine Learning projects that pertain to human-like neural networks.</p>
+			<p style="font-size: 20px">Currently enrolled in an undergraduate degree program with a major in Computer Engineering and an intended focus on Machine Learning and a secondary focus in Chip Scale Integration. Pursuing involvement in research and study abroad opportunities, as well as Engineering student government and design teams. Ultimately, would like to achieve advanced degrees and a career including Machine Learning that pertains to Deep Learning.</p>
+		</div>
+		<div class="jumbotron shadow">
+			<div class="accordion shadow-sm" id="blog">
+			  	<div class="card">
+			    	<div class="card-header" id="2242021" data-toggle="collapse" data-target="#blogOne" aria-expanded="true" aria-controls="blogOne">
+			    		<h2 class="text-center">The Internship Hunt</h2><h6 class="text-center">February 24, 2021</h6>
+			    	</div>
+		    	<div id="blogOne" class="collapse show" aria-labelledby="2242021" data-parent="#blog">
+		      		<div class="card-body">
+		        		<p style="font-size: 20px">At some point in their life, every person struggles with the idea of <b>what's next</b>? Whether it be personal or professional, job placement is a force of stress that nobody can escape from. Not me, not you who is reading this, not a top tier developer, not the president, not an alien somewhere out in space... What I'm trying to say, is that ever since I've come to college I've been on the hunt. I've gone to every career fair, applied to any company that would accept a clueless freshman or a semi-knowledgeable sophomore, and recited my elevator pitch <i>soooo</i> many times I've probably heard it more than my most played song on Spotify. However, all hard work pays off, and this Summer, I will be a SWE intern at CACI International Inc 🥳.</p>
+		        		<p style="font-size: 20px">I'd like to say that it was a walk in the park and that every company on the Fortune 500 was begging for my absolutely amazing programming skills. Unfortunately, that would be a lie. A big lie.</p>
+		        		<p style="font-size: 20px">To be continued eventually...</p>
+		      		</div>
+		    	</div>
+		  	</div>
 		</div>
 	</main>
 	<footer class="footer">
 		<div class="container-fluid bg-light text-muted">
-			<span>© 2020 William Arie Stadtlander</span>
+			<span>© 2021 William Arie Stadtlander</span>
 		</div>
 	</footer>
-	
-	<!-- Extra Data -->
-	<div class="modal fade" id="gameModal" tabindex="-1">
-  		<div class="modal-dialog modal-dialog-centered">
-    		<div class="modal-content">
-      			<div class="modal-header">
-        			<h5>Mini Idle Game - <span id="num"></span></h5>
-        			<button type="button" class="close" data-dismiss="modal">
-        				<span>&times;</span>
-        			</button>
-      			</div>
-		  		<div class="modal-body">
-		  			<div class="row">
-		  				<div class="col-3">
-				    		<button type="button" class="btn btn-outline-secondary" >
-				    			Maker One
-				    		</button>
-				    		<hr>
-				    		Cost: <span id="costOne"></span>
-				    	</div>
-				    	<div class="col-3">
-				    		<button type="button" class="btn btn-outline-secondary" >
-				    			Maker Two
-				    		</button>
-				    		<hr>
-				    		Cost: <span id="costOne"></span>
-				    	</div>
-				    	<div class="col-3">
-				    		<button type="button" class="btn btn-outline-secondary" >
-				    			Maker Three
-				    		</button>
-				    		<hr>
-				    		Cost: <span id="costOne"></span>
-				    	</div>
-				    	<div class="col-3 border-left text-center">
-				    		Thanks for playing this little minigame!
-				    	</div>
-		  			</div>
-		  		</div>
-    		</div>
-  		</div>
-	</div>
-
-
-	<!-- JS For Game -->
-	<script src="js/game.js"></script>
 
 	<!-- JS For Bootstrap v4.5.2, Popper.js, and jQuery -->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
