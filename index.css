@@ -1,0 +1,37 @@
+a {
+  color: #bb86fc !important;
+}
+
+body {
+  background-color: #121212 !important;
+}
+
+hr {
+  background-color: #bb86fc !important;
+  color: #bb86fc !important;
+}
+
+.sec-expand {
+  transition: transform .2s;
+}
+
+.sec-expand:hover {
+  transform: scale(1.02);
+}
+
+.icon-expand {
+  transition: transform .2s;
+}
+
+.icon-expand:hover {
+  transform: scale(1.2);
+}
+
+.surface-one {
+  background-color: #1d1d1d;
+  color: #ffffff;
+}
+
+.surface-two {
+  background-color: #292929;
+}
