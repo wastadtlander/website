@@ -8,17 +8,35 @@ body {
 /* Class Styling */
 .progress {
 	background-color: #121212;
-	height: 5rem;
+	height: 4rem;
 }
 
-.progress-bar {
+/*.progress-bar {
 	background-color: #ffffff;
 	color: #000000;
 	width: 0%;
-}
+}*/
 
 
 /* ID Styling */
+#accentOne {
+	background-color: #3700b3;
+}
+
+#fuelBar {
+	background-color: #FF0000;
+	width: 0%;
+}
+
 #layerOne {
 	background-color: #1d1d1d;
+}
+
+#layerTwo {
+	background-color: #292929;
+}
+
+#waxBar {
+	background-color: #ffffff;
+	width: 0%;
 }
