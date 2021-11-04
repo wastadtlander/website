@@ -4,14 +4,56 @@ let player = {
 	},
 	fuel: {
 		have: new Decimal(50),
-		gain: new Decimal(-0.1),
+		gain: new Decimal(-0.2),
 		max: new Decimal(50)
 	},
 	wax: {
 		have: new Decimal(0),
-		gain: new Decimal(0.1),
+		gain: new Decimal(0.2),
 		max: new Decimal(50)
 	}
+}
+
+function createCandle() {}
+
+function updateWaxInputTicker() {
+	let waxInput = document.getElementById("waxInput");
+	let waxInputTicker = document.getElementById("waxInputTicker");
+	let waxInputTickerValue = document.getElementById("waxInputTickerValue");
+	let waxInputVal = waxInput.value;
+	if (!waxInputVal) {
+		waxInputTickerValue.innerHTML = "";
+		waxInputTicker.style.color = "#ffffff";
+		return;
+	}
+	let percent = new Decimal(new Decimal(waxInputVal).div(player.wax.have).mul(100).toFixed(0));
+	if (percent.lt(100)) {
+		waxInputTickerValue.innerHTML = percent;
+		waxInputTicker.style.color = "#198754";
+		waxInputTickerValue.style.color = "#198754";
+	} else {
+		waxInputTickerValue.innerHTML = "";
+		waxInputTicker.style.color = "#dc3545";
+		waxInputTickerValue.style.color = "#dc3545";
+	}
+}
+
+function updateWax() {
+	if (player.wax.have.eq(player.wax.max)) player.wax.have = player.wax.have.sub(player.wax.max);
+	if (player.wax.have.lt(player.wax.max)) player.wax.have = player.wax.have.add(player.wax.gain);
+
+	updateWaxInputTicker();
+
+	updateHTML(1);
+	updateHTML(2);
+}
+
+function updateFuel() {
+	if (player.fuel.have.eq(0)) player.fuel.have = player.fuel.max;
+	if (player.fuel.have.gt(0)) player.fuel.have = player.fuel.have.add(player.fuel.gain);
+
+	updateHTML(5);
+	updateHTML(6);
 }
 
 function onLoad() {
@@ -37,8 +79,8 @@ function updateHTML(element) {
 		/* Wax gain value */
 		case 4:
 			/* TODO: Clarify how the gain is displayed depending on substraction */
-			if (player.wax.gain.lt(10000)) document.getElementById("waxGain").innerHTML = " (+" + player.wax.gain.toFixed(1) + "/s)";
-			else document.getElementById("waxGain").innerHTML = " (+" + player.wax.gain.toExponential(2) + "/s)";
+			if (player.wax.gain.lt(10000)) document.getElementById("waxGain").innerHTML = " (" + player.wax.gain.toFixed(1) + "/s)";
+			else document.getElementById("waxGain").innerHTML = " (" + player.wax.gain.toExponential(2) + "/s)";
 		/* Fuel have value */					
 		case 5:
 			if (player.wax.have.lt(10000)) document.getElementById("fuelHave").innerHTML = player.fuel.have.toFixed(0);
@@ -66,15 +108,6 @@ function updateHTML(element) {
 /* Main game loop */
 onLoad();
 let game = setInterval(() => {
-	if (player.wax.have.lt(player.wax.max)) player.wax.have = player.wax.have.add(player.wax.gain);
-	else if (player.wax.have.gt(player.wax.max)) player.wax.have = player.wax.max;
-
-	updateHTML(1);
-	updateHTML(2);
-
-	if (player.fuel.have.gt(0)) player.fuel.have = player.fuel.have.add(player.fuel.gain);
-	else if (player.fuel.have.lt(0)) player.fuel.have = 0;
-
-	updateHTML(5);
-	updateHTML(6);
+	updateWax();
+	updateFuel();
 }, 50);

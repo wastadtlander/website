@@ -17,13 +17,14 @@
     <!-- Title -->
     <title>Candle</title>
   </head>
-  <body class="user-select-none">
+  <body class="font-monospace user-select-none">
     <div class="container pt-5">
-      <div class="row" style="height: 20rem;">
+      <div class="row" style="height: 25rem;">
         <div class="col-4 rounded" id="layerOne">
           <div class="row h-50 p-3">
             <div class="col h-100 pt-2 rounded" id="layerTwo">
-              <h2 class="font-monospace">
+              <!-- Wax display and bar -->
+              <h2>
                 Wax
                 <span class="float-end h6" id="waxGain"></span>
                 <span class="float-end" id="waxHave"></span>
@@ -37,7 +38,8 @@
           </div>
           <div class="row h-50 p-3">
             <div class="col h-100 pt-2 rounded" id="layerTwo">
-              <h2 class="font-monospace">
+              <!-- Fuel display and bar -->
+              <h2>
                 Fuel
                 <span class="float-end h6" id="fuelGain"></span>
                 <span class="float-end" id="fuelHave"></span>
@@ -53,17 +55,34 @@
         <div class="col-1"></div>
         <div class="col-7 rounded" id="layerOne">
           <div class="row h-50 p-3">
-            <div class="col-4 h-100 pt-2 rounded" id="layerTwo">
-              Buttons
+            <div class="col-4 h-100 rounded" id="layerTwo">
+              <!-- Candle buttons -->
+              <div class="row h-50 p-2">
+                <div class="input-group input-group-lg">
+                  <span class="input-group-text" id="waxInputTicker">
+                    <span id="waxInputTickerValue"></span>
+                    %
+                  </span>
+                  <input type="number" min="0" class="form-control" placeholder="wax" id="waxInput">
+                </div>
+              </div>
+              <div class="row h-50 p-2">
+                <div class="btn-group" role="group">
+                  <button class="btn btn-primary" type="button" id="candleMakeButton">Make</button>
+                  <button class="btn btn-primary" type="button" id="candleDeleteButton">Delete</button>
+                </div>
+              </div>   
             </div>
             <div class="col-1"></div>
             <div class="col-7 h-100 pt-2 rounded" id="layerTwo">
-              Candle Settings
+              <!-- Candle settings -->
+              Something?
             </div>
           </div>
           <div class="row h-50 p-3">
-            <div class="col h-100 pt-2 rounded" id="layerTwo">
-              Candles
+            <div class="col h-100 pt-2 rounded" tabindex="0" id="candleContainer">
+              <!-- Candles -->
+              Scrollable...Scrollable...Scrollable...Scrollable...Scrollable...Scrollable...Scrollable...Scrollable... 
             </div>
           </div>
         </div>
