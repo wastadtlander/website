@@ -1,0 +1,16 @@
+.value {
+    font-size: 2em;
+}
+
+.word {
+    font-size: 4em;
+}
+
+.wordWrapper {
+    font-family: "Roboto Mono";
+    left: 50%; 
+    position: fixed; 
+    text-align: center;
+    top: 50%; 
+    transform: translate(-50%, -50%);
+}
