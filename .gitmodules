@@ -1,3 +1,3 @@
 [submodule "bill"] 
   path = bill 
-  url = git://github.com/wastadtlander/bill.git
+  url = https://github.com/wastadtlander/bill.git
