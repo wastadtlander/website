@@ -1,43 +1,19 @@
-a {
-    text-decoration: none;
+a { text-decoration: none !important; }
+
+body { background-color: #121212 !important; }
+
+.card {
+    background-color: #1d1d1d !important;
+    color: #ffffff !important;
+    width: 25em;
 }
 
-body {
-    /* background-color: #1b1c18; */
-    background-color: #121212;
+.row {
+    background-color: #1d1d1d !important;
+    color: #ffffff !important;
 }
 
-.header {
-    /* background-color: #23261e; */
-    background-color: #1d1d1d;
-    color: #e4e3dd;
-    transition: transform 0.2s;
-}
-
-.header:hover {
-    transform: scale(1.02);
-}
-
-.icon {
-    /* color: #324f10; */
-    color: #9dbfa1;
-    transition: transform 0.2s;
-}
-
-.icon:hover {
-    transform: scale(1.2);
-}
-
-.body {
-    /* background-color: #23261e; */
-    background-color: #1d1d1d;
-    color: #e4e3dd;
-    transition: transform 0.2s;
-}
-
-.body:hover {
-    transform: scale(1.02);
-}
+.icon { color: #9dbfa1; }
 
 .timeline {
     border-left: 1px solid hsl(0, 0%, 90%);
@@ -45,9 +21,7 @@ body {
     list-style: none;
 }
 
-.timeline .timeline-item {
-    position: relative;
-}
+.timeline .timeline-item { position: relative; }
 
 .timeline .timeline-item:after {
     position: absolute;
@@ -64,6 +38,4 @@ body {
     content: "";
 }
 
-.timeline-text {
-    color: #c5eae7;
-}
+.timeline-text { color: #c5eae7; }
